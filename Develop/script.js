@@ -40,19 +40,16 @@ function generatePassword() {
   function passwordValidation() {
     if(passwordLength < 8){
       alert("You and I both know that number is less than 8...please try again");
-      let userPassLength = prompt("How long is your desired password? (8-128 characters)", "10");
-      //store the password length as a variable
-      passwordLength = userPassLength;
+      //recursive function to force them to start over
+      generatePassword();
     } else if(passwordLength > 128) {
       alert("You and I both know that number is more than 128...please try again");
-      let userPassLength = prompt("How long is your desired password? (8-128 characters)", "10");
-      //store the password length as a variable
-      passwordLength = userPassLength;
+      //recursive function
+      generatePassword();
     } else if(isNaN(passwordLength)) {
       alert("That's not a number...please try again");
-      let userPassLength = prompt("How long is your desired password? (8-128 characters)", "10");
-      //store the password length as a variable
-      passwordLength = userPassLength;
+      //recursive function
+      generatePassword();
     }
   };
 
@@ -222,6 +219,8 @@ function generatePassword() {
   return passwordjoined;
 
 };
+
+
 
 
 
