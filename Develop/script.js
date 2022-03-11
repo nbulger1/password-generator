@@ -36,20 +36,27 @@ function generatePassword() {
 
   //validation for passwordLength to ensure the entered value is an integer between 8 and 128
 
-  //Issue - when I answer a letter, number less than 8, or number greater than 128 twice in a row it continues on with the rest of the prompts instead of getting mad again...
+  //Issue - when I answer a letter, number less than 8, or number greater than 128 twice in a row it continues on with the rest of the prompts instead of getting mad
   function passwordValidation() {
     if(passwordLength < 8){
       alert("You and I both know that number is less than 8...please try again");
-      //recursive function to force them to start over
-      generatePassword();
+      let userPassLength = prompt("How long is your desired password? (8-128 characters)", "10");
+      //store the password length as a variable
+      passwordLength = userPassLength;
+      //Loop through this function until they answer an accepted value
+      passwordValidation();
     } else if(passwordLength > 128) {
       alert("You and I both know that number is more than 128...please try again");
-      //recursive function
-      generatePassword();
+      let userPassLength = prompt("How long is your desired password? (8-128 characters)", "10");
+      //store the password length as a variable
+      passwordLength = userPassLength;
+      passwordValidation();
     } else if(isNaN(passwordLength)) {
       alert("That's not a number...please try again");
-      //recursive function
-      generatePassword();
+      let userPassLength = prompt("How long is your desired password? (8-128 characters)", "10");
+      //store the password length as a variable
+      passwordLength = userPassLength;
+      passwordValidation();
     }
   };
 
@@ -219,8 +226,6 @@ function generatePassword() {
   return passwordjoined;
 
 };
-
-
 
 
 
