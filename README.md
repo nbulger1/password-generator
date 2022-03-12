@@ -52,4 +52,4 @@ To test my password generator, I continually clicked the password generate butto
 
 ## Link
 
-See following for a link to my deployed application: 
+See following for a link to my deployed application: https://nbulger1.github.io/password-generator/
