@@ -36,7 +36,6 @@ function generatePassword() {
 
   //validation for passwordLength to ensure the entered value is an integer between 8 and 128
 
-  //Issue - when I answer a letter, number less than 8, or number greater than 128 twice in a row it continues on with the rest of the prompts instead of getting mad
   function passwordValidation() {
     if(passwordLength < 8){
       alert("You and I both know that number is less than 8...please try again");
