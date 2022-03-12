@@ -47,7 +47,7 @@ Finally, I used the join method to turn the password array into one long string 
 
 To test my password generator, I continually clicked the password generate button and selected different criteria options to make sure the password length and character choices were correct. I also tried to type in password lengths that were not in between 8 and 128 or fail to select any character options to make sure my data validations worked as well. 
 
-![GIF demonstrating testing a password of various lengths with different character choices as well as assessing data validations](./Develop/assets/images/password_tester.gif)
+![GIF demonstrating testing a password of various lengths with different character choices as well as assessing data validations](.assets/images/password_tester.gif)
 
 
 ## Link
